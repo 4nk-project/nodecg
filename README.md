@@ -1,80 +1,63 @@
-# React + Vite + Hono + Cloudflare Workers
+# NodeCG
 
-This template provides a minimal setup for building a React application with TypeScript and Vite, designed to run on Cloudflare Workers. It features hot module replacement, ESLint integration, and the flexibility of Workers deployments.
+[![NodeCG](https://raw.githubusercontent.com/nodecg/nodecg/main/media/splash.png)](https://nodecg.dev/)
 
-![React + TypeScript + Vite + Cloudflare Workers](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/fc7b4b62-442b-4769-641b-ad4422d74300/public)
+[![Discord](https://img.shields.io/discord/754749209722486814)](https://discord.gg/nsXXDFGBEt)
+[![Build Status](https://github.com/nodecg/nodecg/workflows/CI/badge.svg)](https://github.com/nodecg/nodecg/actions?query=workflow%3ACI)
+[![Coverage Status](https://codecov.io/gh/nodecg/nodecg/branch/main/graph/badge.svg)](https://codecov.io/gh/nodecg/nodecg)
+[![Docker Build Status](https://ghcr-badge.egpl.dev/nodecg/nodecg/latest_tag)](https://ghcr.io/nodecg/nodecg)
 
-<!-- dash-content-start -->
+NodeCG is a broadcast graphics framework and application. It enables you to write complex, dynamic broadcast graphics using the web platform. NodeCG has no graphics or drawing primitives of its own. Instead, NodeCG provides a structure for your code and an API to facilitate moving data between the dashboard, the server, and your graphics. It makes few assumptions about how to best code a graphic, and gives you freedom to use whatever libraries, frameworks, tools, and methodologies you want. As such, NodeCG graphics can be rendered in any environment that can render HTML, including:
 
-🚀 Supercharge your web development with this powerful stack:
+- [OBS Studio](https://obsproject.com/)
+- [vMix](http://www.vmix.com/)
+- [XSplit](https://www.xsplit.com/)
+- [CasparCG](https://github.com/CasparCG/server/releases) (v2.2.0+)
 
-- [**React**](https://react.dev/) - A modern UI library for building interactive interfaces
-- [**Vite**](https://vite.dev/) - Lightning-fast build tooling and development server
-- [**Hono**](https://hono.dev/) - Ultralight, modern backend framework
-- [**Cloudflare Workers**](https://developers.cloudflare.com/workers/) - Edge computing platform for global deployment
+> Don't see your preferred streaming software on this list? NodeCG graphics require a modern browser engine. If your streaming software's implementation of browser source uses a recent-ish browser engine, chances are that NodeCG graphics will work in it. You can check what version your streaming software uses for its browser sources by opening [whatversion.net/chrome](https://www.whatversion.net/browser/) as a browser source.
 
-### ✨ Key Features
+Have questions about NodeCG, or just want to say 'hi'? [Join our Discord server](https://discord.gg/nsXXDFGBEt)!
 
-- 🔥 Hot Module Replacement (HMR) for rapid development
-- 📦 TypeScript support out of the box
-- 🛠️ ESLint configuration included
-- ⚡ Zero-config deployment to Cloudflare's global network
-- 🎯 API routes with Hono's elegant routing
-- 🔄 Full-stack development setup
+## Documentation & API Reference
 
-Get started in minutes with local development or deploy directly via the Cloudflare dashboard. Perfect for building modern, performant web applications at the edge.
+Full docs and API reference are available at https://nodecg.dev
 
-<!-- dash-content-end -->
+## Goals
 
-## Getting Started
+The NodeCG project exists to accomplish the following goals:
 
-To start a new project with this template, run:
+- Make broadcast graphics (also known as "character generation" or "CG") more accessible.
+- Remain as close to the web platform as possible.
+- Support broadcasts of any size and ambition.
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/nodecg
-```
+Let's unpack what these statements mean:
 
-A live deployment of this template is available at:
-[https://react-vite-template.templates.workers.dev](https://react-vite-template.templates.workers.dev)
+### > Make broadcast graphics (also known as "character generation" or "CG") more accessible
 
-## Development
+Historically, broadcast graphics have been expensive. They either required expensive hardware, expensive software, or both. NodeCG was originally created to provide real-time broadcast graphics for Tip of the Hats, which is an all-volunteer charity fundraiser that had a budget of \$0 for its first several years.
 
-Install dependencies:
+Now, it is possible to create an ambitious broadcast using entirely free software and consumer hardware. The NodeCG project embraces this democratization of broadcast technology.
 
-```bash
-npm install
-```
+### > Remain as close to the web platform as possible
 
-Start the development server with:
+NodeCG graphics are just webpages. There is absolutely nothing special or unique about them. This is their greatest strength.
 
-```bash
-npm run dev
-```
+By building on the web platform, and not building too many abstractions on top of it, people developing broadcast graphics with NodeCG have access to the raw potential of the web. New APIs and capabilities are continually being added to the web platform, and NodeCG developers should have access to the entirety of what the web can offer.
 
-Your application will be available at [http://localhost:5173](http://localhost:5173).
+### > Support broadcasts of any size and ambition
 
-## Production
+NodeCG's roots are in small broadcasts with no budget. More recently, NodeCG has begun seeing use in increasingly elaborate productions. We believe that one set of tools can and should be able to scale up from the smallest show all the way to the biggest fathomable show. Whether you're using OBS for everything, or a hardware switcher with a traditional key/fill workflow, NodeCG can be a part of any broadcast graphics system.
 
-Build your project for production:
+## Maintainers
 
-```bash
-npm run build
-```
+- [Matt "Bluee" McNamara](https://mattmcn.com/)
+- [Keiichiro "Hoishin" Amemiya](https://twitter.com/hoishinxii)
 
-Preview your build locally:
+## Designers
 
-```bash
-npm run preview
-```
+- [Chris Hanel](http://www.chrishanel.com)
 
-Deploy your project to Cloudflare Workers:
+## Acknowledgements
 
-```bash
-npx wrangler deploy
-```
-
-## Additional Resources
-
-- [Cloudflare Workers Documentation](https://developers.cloudflare.com/workers/)
-- [Vite Documentation](https://vitejs.dev/guide/)
-- [React Documentation](https://reactjs.org/)
+- [Atmo](https://github.com/atmosfar), original dashboard concept and code, the inspiration for toth-overlay
+- [Alex "Lange" Van Camp](https://github.com/alvancamp), designer & developer of [toth-overlay](https://github.com/TipoftheHats/toth-overlay), the base on which NodeCG was built
